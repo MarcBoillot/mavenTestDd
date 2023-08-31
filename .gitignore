@@ -1,4 +1,4 @@
 .env
 lib/
 target/
-javadoc/
+javaDoc/
