@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"fr.campusNum.dd.BDD"},{"l":"fr.campusNum.dd.characters"},{"l":"fr.campusNum.dd.characters.abilities"},{"l":"fr.campusNum.dd.dices"},{"l":"fr.campusNum.dd.engine"},{"l":"fr.campusNum.dd.engine.board"},{"l":"fr.campusNum.dd.exception"}]
