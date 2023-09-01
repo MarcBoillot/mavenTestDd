@@ -1,22 +1,32 @@
 package com.baeldung.dd.engine;
 
+import com.baeldung.dd.BDD.DataBaseException;
 import com.baeldung.dd.dices.Dice;
 import com.baeldung.dd.engine.board.Board;
 import com.baeldung.dd.exception.CharacterOutOfBoundException;
 
 import java.util.Scanner;
 
+/**
+ * permet de lancer le jeu / elle gere l'ensemble (board position du joueur et le dé)
+ */
 public class Game {
 
     private int position;
     Scanner input;
     Board board;
     Dice dice;
-    public Game(){
+
+    /**
+     * instanciation du dé et du plateau
+     */
+    public Game() throws DataBaseException {
         this.input = new Scanner(System.in);
         this.dice = new Dice();
         this.position = 0;
         this.board = new Board();
+        Menu menu = new Menu();
+        menu.createChar();
     }
     public int getPosition() {
         return position;
@@ -29,6 +39,10 @@ public class Game {
         }
     }
 
+    /**
+     *
+     * @throws CharacterOutOfBoundException retourne une erreur quand le joueur est hors plateau de jeu
+     */
     private void oneTurn() throws CharacterOutOfBoundException {
         int diceResult = this.dice.getResult();
         System.out.println("Votre lancé est : "+diceResult);

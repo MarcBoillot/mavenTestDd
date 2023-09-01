@@ -9,6 +9,9 @@ import com.baeldung.dd.characters.Warrior;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * permet l'interaction entre l'utilisateur et le programme
+ */
 public class Menu {
     /**
      * je recupere les données contenu dans ma bdd dans ma table hero
@@ -102,7 +105,7 @@ public class Menu {
                 break;
         }
     }
-    public void createCharacter(String answer){
+    public void createCharacter(String answer) throws DataBaseException {
 
 /**
  * j'instancie le personnage choisi pour lui donner un nom
@@ -128,7 +131,7 @@ public class Menu {
      * menu pour modifier mon personnage
      * @param characters
      */
-    public void modify(Characters characters) {
+    public void modify(Characters characters) throws DataBaseException {
         System.out.println("Souhaitez vous : \n1: Voir votre personnage  \n2: Modifier votre personnage \n3: Lancer partie \n4: Exit");
         String answer = userInput();
             switch (answer) {
@@ -144,7 +147,7 @@ public class Menu {
                     updateMenu(characters);
                     break;
                 case "3":
-                    launcher();
+                    new Game().game();
                     break;
                 case "4":
                     System.out.println("Exit");
@@ -165,9 +168,9 @@ public class Menu {
     /**
      * j'instancie le game pour lancer le jeu
      */
-    private void launcher() {
-        new Game().game();
-    }
+//    private void launcher() throws DataBaseException {
+//
+//    }
 
     private void updateMenu(Characters characters) {
         System.out.println("Modifier !");

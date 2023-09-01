@@ -3,12 +3,12 @@ package com.baeldung.dd.characters;
 import com.baeldung.dd.characters.abilities.Weapons;
 
 /**
- * gtyftyfty
+ * la class warrior est un enfant de character
  */
 public class Warrior extends Characters{
-    private String Char = "fr.campusNum.dd.characters.Warrior";
+    private String Char = "com.baeldung.dd.characters.Warrior";
     /**
-     * gfgfg
+     *
      */
     private Weapons weapon;
     private String shield;
@@ -25,27 +25,46 @@ public class Warrior extends Characters{
         return weapon;
     }
 
+    /**
+     *
+     * @param weapon seul le warrior a des armes
+     */
     public void setWeapon(Weapons weapon) {
         this.weapon = weapon;
     }
+
     public String getShield() {
         return shield;
     }
+
+    /**
+     *
+     * @param shield seul le warrior a un bouclier
+     */
     public void setShield(String shield) {
         this.shield = shield;
     }
+
+    /**
+     * construct vide
+     */
     public Warrior (){
         super();
     }
+
+    /**
+     * construct warrior ou l'on prends juste le nom
+     * @param name
+     */
     public Warrior(String name){
         super(name);
     }
 
     /**
-     * ghjgghuyuuyu
-     * @param name ghggh
-     * @param life hhg (10max)
-     * @param atk hhghgh
+     * construct du warrior
+     * @param name le nom du warrior
+     * @param life vie du warrior (10max)
+     * @param atk attaque du warrior (4 max)
      */
     public Warrior(String name, int life, int atk) {
         super(name, life, atk);

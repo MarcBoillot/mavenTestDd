@@ -1,5 +1,8 @@
 package com.baeldung.dd.characters;
 
+/**
+ * le character est le parent des class warrior et magician et il donne des attributs de reference
+ */
 public abstract class Characters {
     private String name;
     private  int life;
@@ -48,12 +51,25 @@ public abstract class Characters {
         this.life = life;
         this.strength = strength;
     }
+
+    /**
+     * Construct utile pour la bdd
+     * @param type le type du character (magician ou warrior) en fonction de la bdd
+     * @param name  le nom du character dans la bdd
+     * @param strength  la force du character dans la bdd
+     * @param life  la vie du character dans la bdd
+     */
      public Characters(String type, String name, int strength, int life) {
          this.type = type;
          this.name = name;
          this.strength = strength;
          this.life = life;
      }
+
+    /**
+     *
+     * @return retourne en string les attributs du character
+     */
      public String toString() {
          return "  : " +"\nName: "+ getName() + "\nLife: " + getLife() + "\nAttack: " + getStrength() + "\n";
      }

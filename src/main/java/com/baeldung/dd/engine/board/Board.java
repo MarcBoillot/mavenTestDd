@@ -11,6 +11,11 @@ public class Board {
     public List<Cases> getBoard(){
         return board;
     }
+
+    /**
+     *
+     * @return retourne le plateau complet une fois parcouru le nb de case (64 car i commence a 0) defini dans un tableau
+     */
     public List<Cases> generateBoard (){
         board = new ArrayList<>();
         for (int i = 0; i < 63;i ++) {
@@ -19,6 +24,10 @@ public class Board {
         return board;
     }
 
+    /**
+     *
+     * @return retourne le nombre de case du plateau en string
+     */
     @Override
     public String toString() {
         return ""+board;
